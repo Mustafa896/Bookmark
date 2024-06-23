@@ -20,7 +20,7 @@ function addSites() {
         getName.value = ''
         getUrl.value = ''
     } else {
-        alert("Please enter a valid URL");
+        alert("Please enter a valid URL and a title with more than 3 characters");
     }
 }
 
