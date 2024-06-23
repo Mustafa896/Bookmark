@@ -17,11 +17,11 @@ function addSites() {
         sites.push(site);
         localStorage.setItem('allSites', JSON.stringify(sites));
         display();
-        getName.value = ''
-        getUrl.value = ''
     } else {
-        alert("Please enter a valid URL and a title with more than 3 characters");
+        alert("Please enter a valid URL and a name with more than 2 characters.");
     }
+    getName.value = ''
+    getUrl.value = ''
 }
 
 function display() {
@@ -51,5 +51,5 @@ function validate() {
     console.log("Name validation:", nameValid);
     console.log("URL validation:", urlValid);
 
-    return nameValid || urlValid;
+    return nameValid && urlValid;
 }
